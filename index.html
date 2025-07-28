@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>-
+    <div id="Start-Screen">
+        <label for="Heb">Hebrew: </label>
+        <img src="https://cdn.britannica.com/53/1753-004-03582EDA/Flag-Israel.jpg" alt="" onclick="Choise_Hebrew()" id="Heb"> <!--Isreal Flag -->
+        <label for="Eng">English: </label>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/255px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png" alt="" onclick="Choise_English()"id="Eng"> <!--US Flag-->
+    </div>
+    <header>
+        <h1 id="H-T">Welcome To my site:</h1>
+        <p id="Start-info">Here you give a input of a dictonary like so : {1:Helo,2:Sup,3:What} or 1:Helo,2:Sup,3:What<br>
+        And you will get a card with the key on the front and you will need to type the value</p>
+        <label for="F-K" id="Label-Checkbox">Filp Keys? </label>
+        <input type="checkbox" id="F-K">
+    </header><br>
+    <div id="inputs">
+        <label for="dict-inp-txt">Enter the dictonary via text (this will be tested first):</label>
+        <input type="text" placeholder="Enter text" id="dict-inp-txt"><br>
+        <label for="dict-inp-txt-file">Enter the dictonary via .txt file:</label>
+        <input type="file" id="dict-inp-txt-file">
+        <button id="submit-btn">Submit</button>
+    </div>
+    <div id="card">
+        <div style="text-align: left; margin-left: 100px;">
+            <label id="key-card"></label>
+            <label for="value-card" id="label-value"> is </label>
+            <label for="key-card" id="value-card"></label>
+        </div>
+
+        <h1 id="CorI"></h1> 
+        <button onclick="NextCard()">Next Card</button>
+        <button onclick="RevealCard()">Reveal Card</button><br>
+        <label for="loop-over?">Loop Over The Cards</label>
+        <input type="checkbox" id="loop-over?">
+        <h1 id="tries">You Haven't Failed</h1>
+        <button onclick="Show_Satistics()">Show / Close All Satistics</button>
+    </div>
+    <input type="text" placeholder="Type Your Guess Here" value="" id="U-G">
+    <div id="Stats-div">
+        <h1 id="T-Title">Words / Mistakes</h1>
+        <label for="sort-by-select">Sort By: </label>
+        <select name="sort-by" id="sort-by-select">
+            <option value="mistakes">Most Mistakes</option>
+            <option value="alphabetically">Alphabet</option>
+            <option value="length">Length Of Word</option>
+        </select>
+        <table id="Satistics">
+            <tbody id="statisticsBody">
+                <!-- Statistics rows will be added here -->
+            </tbody>
+        </table>
+        <button onclick="Copy_Stats()">Copy All Stats To ClipBoard</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
