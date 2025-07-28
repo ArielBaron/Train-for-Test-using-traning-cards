@@ -1,5 +1,0 @@
-name: שם,
-age: גיל,
-number : מספר,
-poison: רעל,
-End: סוף
